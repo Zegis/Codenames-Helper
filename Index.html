@@ -1,0 +1,47 @@
+<html>
+<head>
+    <style>
+        .upside {
+            -moz-transform: rotate(-180deg);
+            font-size: medium;
+        }
+
+        .regular{
+            text-align: center; 
+            font-size: x-large;
+            margin-bottom: 0px;
+        }
+
+        .card {
+            border:2px solid black; 
+            width:90%; 
+            padding: 5%;
+        }
+    </style>
+    
+</head>
+
+<body style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr 1fr;">
+
+    <script>
+
+        (function(){
+
+            var wordList = ['Latarnia','Wrak','Nietoperz','Hak','Nóż','Maska','Rogi','Ogon','Palec','Kocioł','Duch','Sowa','Wiedźma','Dom','Świeca','Kruk','Zombie','Miotła','Zaklęcie','Nagrobek','Wilkołak','Czarodziej','Kot','Pająk','Grób','Czaszka','Kość','Cukierek','Psikus','Peleryna','Trumna','Zwłoki','Urok','Krew','Kły','Lampion','Koszmar','Dusza','Grobowiec','Różdżka','Ghoul','Licz','Wampir','Poncz','Diabeł','Pajęczyna','Dynia'];
+            console.log(wordList.length);
+            var word = "";
+//            var template = `;
+            var root = document.getElementsByTagName("body")[0];
+            
+            wordList.forEach(function(word){
+
+                var newCard = document.createElement("div");
+                newCard.className = "card";
+                newCard.innerHTML = `<p class=\"upside\"> ${word}</p><p class=\"regular\"> ${word} </p>`;
+                root.appendChild(newCard);
+            })
+        })();      
+    </script>
+
+</body>
+<html>
